@@ -46,12 +46,12 @@ $allPeople = Person::get_People();
     <title>Document</title>
 </head>
 
-<body>
+<body style="background-color: dimgray;">
 
     <label style="font-size: 20px;">Suchen: </label><input id="searchTxt" type="text" style="font-size: 20px;" oninput="Search(this)"></input>
     </br>
     </br>
-    <div id="ShowRooms" style="width: 100vw;">
+    <div id="ShowRooms" style="width: 100%;">
 
     </div>
     <form action="" method="POST">
