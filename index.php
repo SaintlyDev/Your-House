@@ -48,7 +48,7 @@ $allPeople = Person::get_People();
 
 <body>
 
-    <label style="font-size: 20px;">Suchen: </label><input id="searchTxt" type="text" style="font-size: 20px;" oninput="Search(this)"></textarea>
+    <label style="font-size: 20px;">Suchen: </label><input id="searchTxt" type="text" style="font-size: 20px;" oninput="Search(this)"></input>
     </br>
     </br>
     <div id="ShowRooms" style="width: 100vw;">

@@ -4,7 +4,7 @@ let roomDiv = document.getElementById("ShowRooms");
 
 window.onload = function () {
     btnToChange.textContent = "Move " + personSelect.options[personSelect.selectedIndex].innerText + " to:";
-    var url = "/ObjektOrientierung/Classes/APIs/ShowRooms.php";
+    var url = "/YourHouse/Classes/APIs/ShowRooms.php";
 
     var xhr = new XMLHttpRequest();
     xhr.open("GET", url);
@@ -34,9 +34,9 @@ async function SearchSimple(txt) {
 
 async function Search(txt) {
     if (txt.value === "" || txt.value.trim().length === 0) {
-        var url = "/ObjektOrientierung/Classes/APIs/ShowRooms.php"
+        var url = "/YourHouse/Classes/APIs/ShowRooms.php"
     } else {
-        var url = "/ObjektOrientierung/Classes/APIs/ShowRooms.php?search=" + txt.value;
+        var url = "/YourHouse/Classes/APIs/ShowRooms.php?search=" + txt.value;
     }
 
     var xhr = new XMLHttpRequest();
