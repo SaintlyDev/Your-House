@@ -2,8 +2,8 @@
 // tis a test
 error_reporting(E_ALL);
 
-require_once("Classes/DB/DbCon.php");
-require_once("Classes/Entity/Personen.Class.php");
+require_once("Classes/DB/DbCon.Class.php");
+require_once("Classes/Entity/Person.Class.php");
 require_once("Classes/Room/Room.class.php");
 
 $yourMom = Person::get_Person(1);
@@ -48,7 +48,7 @@ $allPeople = Person::get_People();
 
 <body style="background-color: dimgray;">
 
-    <label style="font-size: 20px;">Suchen: </label><input id="searchTxt" type="text" style="font-size: 20px;" oninput="Search(this)"></input>
+    <label style="font-size: 20px;">Suchen: </label><input id="searchTxt" type="text" style="border-radius: 8px; font-size: 20px;" oninput="Search(this)"></input>
     </br>
     </br>
     <div id="ShowRooms" style="width: 100%;">
@@ -56,7 +56,7 @@ $allPeople = Person::get_People();
     </div>
     <form action="" method="POST">
         </br>
-        <select id="personSelect" onchange="selectChange(this)" name="personMove">
+        <select id="personSelect" onchange="selectChange(this)" name="personMove" style="border-radius: 8px;">
             <?php
             foreach ($allPeople as $person) {
             ?>
@@ -65,8 +65,8 @@ $allPeople = Person::get_People();
             }
             ?>
         </select>
-        <button id="btnToChange">Move Test to:</button>
-        <select id="roomSelect" name="roomTarget">
+        <button id="btnToChange" style="border-radius: 8px;">Move Test to:</button>
+        <select id="roomSelect" name="roomTarget" style="border-radius: 8px;">
             <?php
             foreach ($allRooms as $room) {
             ?>

@@ -4,7 +4,7 @@ let roomDiv = document.getElementById("ShowRooms");
 
 window.onload = function () {
     btnToChange.textContent = "Move " + personSelect.options[personSelect.selectedIndex].innerText + " to:";
-    var url = "/YourHouse/Classes/APIs/ShowRooms.php";
+    var url = "/YourHouse/APIs/ShowRooms.php";
 
     var xhr = new XMLHttpRequest();
     xhr.open("GET", url);
@@ -29,14 +29,14 @@ async function SearchSimple(txt) {
     const response = await fetch("Classes/APIs/ShowRooms.php?search=" + txt.value);
     roomDiv.innerHTML = "";
     //roomDiv.innerHTML = response;
-    roomDiv.innerHTML = '<iframe src=' + txt.value + '"Classes/APIs/ShowRooms.php?search=" name="targetframe" allowTransparency="true" scrolling="yes" frameborder="0" style="width: 100vw;"></iframe>';
+    roomDiv.innerHTML = '<iframe src=' + txt.value + '"APIs/ShowRooms.php?search=" name="targetframe" allowTransparency="true" scrolling="yes" frameborder="0" style="width: 100vw;"></iframe>';
 }
 
 async function Search(txt) {
     if (txt.value === "" || txt.value.trim().length === 0) {
-        var url = "/YourHouse/Classes/APIs/ShowRooms.php"
+        var url = "/YourHouse/APIs/ShowRooms.php"
     } else {
-        var url = "/YourHouse/Classes/APIs/ShowRooms.php?search=" + txt.value;
+        var url = "/YourHouse/APIs/ShowRooms.php?search=" + txt.value;
     }
 
     var xhr = new XMLHttpRequest();
