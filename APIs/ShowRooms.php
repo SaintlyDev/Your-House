@@ -89,13 +89,13 @@ if (isset($search)) {
         echo "</br>";
         //start rumor is they are sus
         if (count($roomers->get_personInRoom($roomers->get_id())) >= $susAmount)
-            echo "<pre>     i wonder what they are doing?</pre>";
+            echo "<pre>   i wonder what they are doing?</pre>";
         // if fabi is in this room HS
         elseif (in_array(Person::get_Person(7), $roomers->get_personInRoom($roomers->get_id())))
-            echo "<pre>     Hs Fabi is here huh?</pre>";
+            echo "<pre>   Hs Fabi is here huh?</pre>";
         // if this room is not yours but you are inside then: WTF?!
         elseif ($roomers->get_id() != (Room::get_Room(3))->get_id() && in_array(Person::get_Person(4), $roomers->get_personInRoom($roomers->get_id())))
-            echo "<pre>     What are you doing here, this is not your room?!</pre>";
+            echo "<pre>   What are you doing here, this is not your room?!</pre>";
         else
             echo "<pre>   Nothing to see here.</pre>";
     }

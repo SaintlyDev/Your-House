@@ -48,7 +48,7 @@ $allPeople = Person::get_People();
 
 <body style="background-color: dimgray;">
 
-    <label style="font-size: 20px;">Suchen: </label><input id="searchTxt" type="text" style="border-radius: 8px; font-size: 20px;" oninput="Search(this)"></input>
+    <label style="font-size: 20px;">Search: </label><input id="searchTxt" type="text" style="border-radius: 8px; font-size: 20px;" oninput="Search(this)"></input>
     </br>
     </br>
     <div id="ShowRooms" style="width: 100%;">
@@ -80,13 +80,6 @@ $allPeople = Person::get_People();
 <script src="indexFun.js"></script>
 </html>
 <?php
-//End of Page
-$yourMom->save_Person();
-$yourSister->save_Person();
-$yourDad->save_Person();
-$you->save_Person();
-$friend0->save_Person();
-$yourBoss->save_Person();
-$fabi->save_Person();
+// End of Page
 
 ?>
